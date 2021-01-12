@@ -30,7 +30,7 @@ class Profile extends CI_Controller {
         $data['s_home'] =$this->admin_m->single_select_by_id($id,'home');
         valid_user($data['s_home']['user_id']);
 
-        $data['home'] = $this->admin_m->get_home();
+        $data['home'] = $this->admin_m->get_home(); 
         $data['social_sites'] = $this->admin_m->select('social_sites');
 		$data['main_content'] = $this->load->view('admin/dashboard/profile/home', $data, TRUE);
 		$this->load->view('admin/index',$data);
